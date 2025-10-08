@@ -11,7 +11,7 @@ def find_similar_reviews(query,search_method='similarity_score', n_movies=3, f_k
     
     data_df = pd.read_csv(r"data\netflix-tv-shows-and-movies\cleaned_netflix.csv")
     
-    retriever = get_retriever(search_type=search_method, k=n_movies, fetch_k=f_k)
+    retriever = get_retriever(search_type=search_method, n_retrieves=n_movies, n_f_k=f_k)
     
     
     most_similar_reviews = retriever.invoke(query)

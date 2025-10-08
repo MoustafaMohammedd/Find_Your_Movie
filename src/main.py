@@ -6,7 +6,7 @@ from src.retrieval.search import find_similar_reviews
 app = FastAPI()
 
 class QueryRequest(BaseModel):
-    query: str
+    query: str = "movie talking about romantic love story between couple fighting to live together"
     search_method: str = 'mmr'
     n_movies: int = 3
     f_k: int = 10     
